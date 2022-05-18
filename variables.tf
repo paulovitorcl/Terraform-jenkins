@@ -1,3 +1,10 @@
+## Variales to connect to Providers 
+variable "my_profile" {
+  type = string
+  default = "awspersonal"
+  description = "Name of my profile configured in my awscli"
+}
+
 ## Variables to deploy Network modules 
 
 variable "availability_zones" {
