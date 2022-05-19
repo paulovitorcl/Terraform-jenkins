@@ -1,7 +1,7 @@
 ## Variales to connect to Providers 
 variable "my_profile" {
-  type = string
-  default = "awspersonal"
+  type        = string
+  default     = "awspersonal"
   description = "Name of my profile configured in my awscli"
 }
 
@@ -35,7 +35,7 @@ variable "vpc_name" {
 
 variable "instance_type" {
   type        = string
-  default     = "t2.micro"
+  default     = "t2.medium"
   description = "Define the EC2 instance type"
 }
 

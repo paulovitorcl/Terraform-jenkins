@@ -1,3 +1,3 @@
 output "s3_bucket" {
-    value = aws_s3_bucket.tfstate_storage_poc.bucket
+  value = aws_s3_bucket.tfstate_storage_poc.bucket
 }

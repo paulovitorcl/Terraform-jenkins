@@ -1,17 +1,17 @@
 # Create s3 bucket to store tfstate files
 resource "aws_s3_bucket" "tfstate_storage_poc" {
-    bucket = var.bucket_name_poc
+  bucket = var.bucket_name_poc
 
-    lifecycle {
-        prevent_destroy = false
-    }
+  lifecycle {
+    prevent_destroy = false
+  }
 }
 
 resource "aws_s3_bucket_versioning" "versioning_poc" {
-    bucket = aws_s3_bucket.tfstate_storage_poc.id
-    versioning_configuration {
-        status = "Enabled"
-    }
+  bucket = aws_s3_bucket.tfstate_storage_poc.id
+  versioning_configuration {
+    status = "Enabled"
+  }
 }
 
 resource "aws_s3_bucket_public_access_block" "block_public_acls_poc" {
